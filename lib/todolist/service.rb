@@ -1,11 +1,11 @@
 # All business logic of Todolist gem.
 module Todolist
   class Service
-    def add
+    def add(title = '', description = nil)
       raise NotImplementedError
     end
 
-    def edit(todo, values = {})
+    def edit(todo)
       raise NotImplementedError
     end
 
