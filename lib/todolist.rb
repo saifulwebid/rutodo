@@ -1,5 +1,3 @@
 require "todolist/version"
-
-module Todolist
-  # Your code goes here...
-end
+require "todolist/service"
+require "todolist/todo"
