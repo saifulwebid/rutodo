@@ -1,12 +1,13 @@
 # All business logic of Todolist gem.
 module Todolist
   class Service
-    def initialize(db: nil)
-      @database = db
+    def initialize(service: nil)
+      @service = service
     end
 
     def add(title = '', description = nil)
-      raise NotImplementedError
+      todo = Todolist::Todo.new(nil, title, description)
+      @service.insert(todo)
     end
 
     def edit(todo)
