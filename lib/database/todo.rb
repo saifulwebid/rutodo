@@ -17,6 +17,12 @@ module Database
 
   class TodoService
 
+    def get(id)
+      todo = Database::Todo[id]
+
+      todo.as_entity
+    end
+
     def insert(todo)
       todo = Database::Todo.new(
         title: todo.title,
