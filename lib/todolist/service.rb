@@ -7,10 +7,15 @@ module Todolist
 
     def add(title = '', description = nil)
       todo = Todolist::Todo.new(nil, title, description)
+
+      return false unless todo.valid?
+
       @service.insert(todo)
     end
 
     def edit(todo)
+      return false unless todo.valid?
+
       @service.update(todo)
     end
 
