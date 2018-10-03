@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "onboarding_saiful"
+      MYSQL_USER: "gem"
+      MYSQL_PASSWORD: "gem"
+    volumes:
+      - mysql_onboarding_saiful:/var/lib/mysql
+volumes:
+  mysql_onboarding_saiful:
