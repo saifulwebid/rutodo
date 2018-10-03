@@ -29,5 +29,16 @@ module Database
       todo.as_entity
     end
 
+    def update(todo)
+      todo = Database::Todo[todo.id].set(
+        title: todo.title,
+        description: todo.description,
+        done: todo.status == :finished
+      )
+
+      todo.save_changes
+
+      todo.as_entity
+    end
   end
 end

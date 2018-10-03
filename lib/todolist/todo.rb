@@ -10,5 +10,9 @@ module Todolist
       @description = description
       @status      = status
     end
+
+    def mark_as_done!
+      @status = :finished
+    end
   end
 end
