@@ -23,6 +23,18 @@ module Database
       todo.as_entity
     end
 
+    def get_all
+      Database::Todo.map { |todo| todo.as_entity }
+    end
+
+    def get_pending
+      Database::Todo.where(done: false).map { |todo| todo.as_entity }
+    end
+
+    def get_finished
+      Database::Todo.where(done: true).map { |todo| todo.as_entity }
+    end
+
     def insert(todo)
       todo = Database::Todo.new(
         title: todo.title,

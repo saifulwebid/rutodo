@@ -24,15 +24,15 @@ module Todolist
     end
 
     def get_all
-      raise NotImplementedError
+      @service.get_all
     end
 
     def get_pending
-      raise NotImplementedError
+      @service.get_pending
     end
 
     def get_finished
-      raise NotImplementedError
+      @service.get_finished
     end
 
     def delete(id)
