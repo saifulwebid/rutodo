@@ -11,11 +11,12 @@ module Todolist
     end
 
     def edit(todo)
-      raise NotImplementedError
+      @service.update(todo)
     end
 
     def mark_as_done(todo)
-      raise NotImplementedError
+      todo.mark_as_done!
+      edit(todo)
     end
 
     def get(id)
