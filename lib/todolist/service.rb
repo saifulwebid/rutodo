@@ -20,7 +20,7 @@ module Todolist
     end
 
     def get(id)
-      raise NotImplementedError
+      @service.get(id)
     end
 
     def get_all
