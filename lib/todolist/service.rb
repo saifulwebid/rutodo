@@ -35,12 +35,12 @@ module Todolist
       @service.get_finished
     end
 
-    def delete(id)
-      raise NotImplementedError
+    def delete(todo)
+      @service.delete(todo)
     end
 
     def delete_finished
-      raise NotImplementedError
+      @service.delete_finished
     end
   end
 end

@@ -58,5 +58,13 @@ module Database
 
       todo.as_entity
     end
+
+    def delete(todo)
+      Database::Todo[todo.id].destroy
+    end
+
+    def delete_finished
+      Database::Todo.where(done: true).delete.as_entity
+    end
   end
 end
