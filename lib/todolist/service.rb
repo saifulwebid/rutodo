@@ -16,6 +16,8 @@ module Todolist
     #
     # @param [String] title: title of the todo.
     # @param [String] description: description of the todo.
+    # @return [Todolist::Todo]: a todo created on the storage,
+    #                           but will return false if todo is invalid.
     def add(title = '', description = nil)
       todo = Todolist::Todo.new(nil, title, description)
 
