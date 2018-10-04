@@ -1,6 +1,6 @@
 adapter: mysql2
-host: 127.0.0.1
-port: 3306
-database: onboarding_saiful
-username: gem
-password: gem
+host: <%= ENV["TODOLIST_DB_HOST"] %>
+port: <%= ENV["TODOLIST_DB_PORT"] %>
+database: <%= ENV["TODOLIST_DB_NAME"] %>
+username: <%= ENV["TODOLIST_DB_USER"] %>
+password: <%= ENV["TODOLIST_DB_PASS"] %>
