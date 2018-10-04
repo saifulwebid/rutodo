@@ -21,12 +21,20 @@ Then do a `bundle install`.
 
 After that, configure the database connection by environment variables declared in `env.sample` file.
 
+### Migrate database
+
 Include Todolist's `Rakefile` to your project's `Rakefile`:
 
 ```ruby
 spec = Gem::Specification.find_by_name 'todolist'
 rakefile = "#{spec.gem_dir}/lib/todolist/Rakefile"
 load rakefile
+```
+
+Then, do this:
+
+```sh
+rake todolist:migrate
 ```
 
 ## Dependency
