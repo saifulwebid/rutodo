@@ -23,21 +23,21 @@ module Todolist
       #
       # @return [Array[Todolist::Todo]]: the retrieved todos from the storage.
       def get_all
-        Todolist::Database::Todo.map { |todo| todo.as_entity }
+        Todolist::Database::Todo.map(&:as_entity)
       end
 
       # Get pending will retrieve all pending todos from the storage.
       #
       # @return [Array[Todolist::Todo]]: all pending todos from the storage.
       def get_pending
-        Todolist::Database::Todo.where(done: false).map { |t| t.as_entity }
+        Todolist::Database::Todo.where(done: false).map(&:as_entity)
       end
 
       # Get all will retrieve all finished todos from the storage.
       #
       # @return [Array[Todolist::Todo]]: all finished todos from the storage.
       def get_finished
-        Todolist::Database::Todo.where(done: true).map { |t| t.as_entity }
+        Todolist::Database::Todo.where(done: true).map(&:as_entity)
       end
 
       # Insert will insert a new todo to the storage.

@@ -12,10 +12,10 @@ module Todolist
       # @return [Todolist::Todo]: as described aboce.
       def as_entity
         Todolist::Todo.new(
-          self.id,
-          self.title,
-          self.description,
-          self.done ? :finished : :pending
+          id,
+          title,
+          description,
+          done ? :finished : :pending
         )
       end
 
