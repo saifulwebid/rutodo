@@ -5,8 +5,6 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
 
-require 'todolist'
-
 spec = Gem::Specification.find_by_name 'todolist'
 rakefile = "#{spec.gem_dir}/lib/todolist/Rakefile"
 load rakefile
