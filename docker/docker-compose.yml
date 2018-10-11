@@ -6,10 +6,10 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "password"
-      MYSQL_DATABASE: "onboarding_saiful"
-      MYSQL_USER: "gem"
-      MYSQL_PASSWORD: "gem"
+      MYSQL_DATABASE: "rutodo"
+      MYSQL_USER: "rutodo"
+      MYSQL_PASSWORD: "rutodo"
     volumes:
-      - mysql_onboarding_saiful:/var/lib/mysql
+      - mysql_rutodo:/var/lib/mysql
 volumes:
-  mysql_onboarding_saiful:
+  mysql_rutodo:
