@@ -36,8 +36,14 @@ RSpec.describe Rutodo::Todo do
       it{ expect(todo.valid?).to eq(true) }
     end
 
-    context 'todo without title' do
+    context 'todo with nil title' do
       todo = described_class.new(nil, nil, nil, :pending)
+
+      it{ expect(todo.valid?).to eq(false) }
+    end
+
+    context 'todo with empty string title' do
+      todo = described_class.new(nil, "", nil, :pending)
 
       it{ expect(todo.valid?).to eq(false) }
     end

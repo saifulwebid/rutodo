@@ -33,7 +33,7 @@ module Rutodo
     # Valid? will check if todo is valid. It will be valid unless the title is
     # nil, as a todo without a title is meaningless.
     def valid?
-      return false if @title.nil?
+      return false if @title.nil? || @title == ""
 
       true
     end
