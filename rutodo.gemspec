@@ -1,10 +1,10 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'todolist/version'
+require 'rutodo/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'todolist'
-  spec.version       = Todolist::VERSION
+  spec.name          = 'rutodo'
+  spec.version       = Rutodo::VERSION
   spec.authors       = ['Muhammad Saiful Islam']
   spec.email         = ['saiful.islam@bukalapak.com']
 

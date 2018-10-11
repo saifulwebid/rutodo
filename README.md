@@ -1,4 +1,4 @@
-# todolist
+# rutodo
 
 A gem to simply store todos.
 
@@ -14,7 +14,7 @@ git checkout create-ruby-gem
 Include the gem in your Ruby app's `Gemfile`:
 
 ```ruby
-gem "todolist", :path => "<path_to_todolist>"
+gem "rutodo", :path => "<path_to_rutodo>"
 ```
 
 Then do a `bundle install`.
@@ -23,11 +23,11 @@ After that, configure the database connection by environment variables declared 
 
 ### Migrate database
 
-Include Todolist's `Rakefile` to your project's `Rakefile`:
+Include Rutodo's `Rakefile` to your project's `Rakefile`:
 
 ```ruby
-spec = Gem::Specification.find_by_name 'todolist'
-rakefile = "#{spec.gem_dir}/lib/todolist/Rakefile"
+spec = Gem::Specification.find_by_name 'rutodo'
+rakefile = "#{spec.gem_dir}/lib/rutodo/Rakefile"
 load rakefile
 ```
 
@@ -66,11 +66,11 @@ A todo consists of:
 
 ## Usage
 
-Set up todolist dependency first:
+Set up rutodo dependency first:
 
 ```ruby
-db_service = Todolist::Database::TodoService.new
-todo_service = Todolist::Service.new(service: db_service)
+db_service = Rutodo::Database::TodoService.new
+todo_service = Rutodo::Service.new(service: db_service)
 ```
 
 Then, you can use `todo_service` to manage your todos.

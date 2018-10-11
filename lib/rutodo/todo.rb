@@ -1,4 +1,4 @@
-module Todolist
+module Rutodo
 
   # Todo is a class that represents, well, a todo.
   # Its @title and @description can be modified publicly; @id and @status can't.

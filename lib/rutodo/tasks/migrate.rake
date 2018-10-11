@@ -1,5 +1,5 @@
-namespace :todolist do
-  desc 'Migrate Todolist database.'
+namespace :rutodo do
+  desc 'Migrate Rutodo database.'
   task :migrate do
     require 'sequel'
     require 'yaml'
