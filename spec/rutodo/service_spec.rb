@@ -1,13 +1,13 @@
-RSpec.describe Todolist::Service do
+RSpec.describe Rutodo::Service do
   let(:db_service){ Object.new }
   let(:service){ described_class.new(service: db_service) }
-  let(:valid_todo){ Todolist::Todo.new(1, 'A valid todo', nil, :pending) }
-  let(:invalid_todo){ Todolist::Todo.new(2, nil, nil, :pending) }
+  let(:valid_todo){ Rutodo::Todo.new(1, 'A valid todo', nil, :pending) }
+  let(:invalid_todo){ Rutodo::Todo.new(2, nil, nil, :pending) }
 
   describe '#add' do
     before(:each) do
       # mock Database::TodoService
-      allow(db_service).to receive(:insert){ Todolist::Todo.new }
+      allow(db_service).to receive(:insert){ Rutodo::Todo.new }
     end
 
     context 'valid todo' do
@@ -28,7 +28,7 @@ RSpec.describe Todolist::Service do
   describe '#edit' do
     before(:each) do
       # mock Database::TodoService
-      allow(db_service).to receive(:update){ Todolist::Todo.new }
+      allow(db_service).to receive(:update){ Rutodo::Todo.new }
     end
 
     context 'valid todo' do

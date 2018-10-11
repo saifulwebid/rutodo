@@ -1,4 +1,4 @@
-RSpec.describe Todolist::Todo do
+RSpec.describe Rutodo::Todo do
   describe '#mark_as_done!' do
     context 'read-only and read-write attributes' do
       todo = described_class.new
