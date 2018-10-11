@@ -16,6 +16,8 @@ module Rutodo
       def get(id)
         todo = Rutodo::Database::Todo[id]
 
+        return false unless todo
+
         todo.as_entity
       end
 
