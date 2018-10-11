@@ -4,17 +4,10 @@ A gem to simply store todos.
 
 ## Installation
 
-Clone this repository and checkout `create-ruby-gem` branch.
-
-```sh
-git clone git://github.com/saifulwebid/rutodo.git
-git checkout create-ruby-gem
-```
-
 Include the gem in your Ruby app's `Gemfile`:
 
 ```ruby
-gem "rutodo", :path => "<path_to_rutodo>"
+gem "rutodo", :git => "https://github.com/saifulwebid/rutodo.git"
 ```
 
 Then do a `bundle install`.
@@ -26,9 +19,9 @@ After that, configure the database connection by environment variables declared 
 Include Rutodo's `Rakefile` to your project's `Rakefile`:
 
 ```ruby
-spec = Gem::Specification.find_by_name 'rutodo'
-rakefile = "#{spec.gem_dir}/lib/rutodo/Rakefile"
-load rakefile
+  spec = Gem::Specification.find_by_name 'rutodo'
+  rakefile = "#{spec.gem_dir}/lib/rutodo/Rakefile"
+  load rakefile
 ```
 
 Then, do this:

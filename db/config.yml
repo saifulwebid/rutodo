@@ -1,6 +1,6 @@
 adapter: mysql2
-host: <%= ENV["TODOLIST_DB_HOST"] %>
-port: <%= ENV["TODOLIST_DB_PORT"] %>
-database: <%= ENV["TODOLIST_DB_NAME"] %>
-username: <%= ENV["TODOLIST_DB_USER"] %>
-password: <%= ENV["TODOLIST_DB_PASS"] %>
+host: <%= ENV["RUTODO_DB_HOST"] %>
+port: <%= ENV["RUTODO_DB_PORT"] %>
+database: <%= ENV["RUTODO_DB_NAME"] %>
+username: <%= ENV["RUTODO_DB_USER"] %>
+password: <%= ENV["RUTODO_DB_PASS"] %>
