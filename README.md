@@ -7,7 +7,7 @@ A gem to simply store todos.
 Clone this repository and checkout `create-ruby-gem` branch.
 
 ```sh
-git clone git://github.com/saifulwebid/onboarding-sre.git
+git clone git://github.com/saifulwebid/rutodo.git
 git checkout create-ruby-gem
 ```
 
