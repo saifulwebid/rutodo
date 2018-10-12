@@ -62,6 +62,8 @@ A todo consists of:
 Set up rutodo dependency first:
 
 ```ruby
+require 'rutodo/database'
+
 db_service = Rutodo::Database::TodoService.new
 todo_service = Rutodo::Service.new(service: db_service)
 ```
